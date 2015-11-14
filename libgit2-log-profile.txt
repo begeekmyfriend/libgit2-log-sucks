@@ -1,0 +1,426 @@
+# ========
+# captured on: Sat Nov 14 22:28:12 2015
+# hostname : LeoMa-ThinkPad-T440
+# os release : 3.13.0-57-generic
+# perf version : 3.13.11-ckt21
+# arch : x86_64
+# nrcpus online : 4
+# nrcpus avail : 4
+# cpudesc : Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+# cpuid : GenuineIntel,6,69,1
+# total memory : 3748808 kB
+# cmdline : /usr/lib/linux-tools-3.13.0-57/perf record ./show-last-commit.sh 
+# event : name = cycles, type = 0, config = 0x0, config1 = 0x0, config2 = 0x0, excl_usr = 0, excl_kern = 0, excl_host = 0, excl_guest = 1, precise_ip = 0, attr_mmap2 = 0, attr_mmap  = 1, attr_mmap_data = 0
+# HEADER_CPU_TOPOLOGY info available, use -I to display
+# HEADER_NUMA_TOPOLOGY info available, use -I to display
+# pmu mappings: cpu = 4, software = 1, tracepoint = 2, breakpoint = 5
+# ========
+#
+# Samples: 43K of event 'cycles'
+# Event count (approx.): 28120863440
+#
+# Overhead  Command       Shared Object                                               Symbol
+# ........  .......  ..................  ...................................................
+#
+    13.90%      log  libgit2.so.0.23.0   [.] git_tree__parse                                
+    12.52%      log  libgit2.so.0.23.0   [.] git__strtol64                                  
+     8.06%      log  libc-2.19.so        [.] _int_malloc                                    
+     6.96%      log  libgit2.so.0.23.0   [.] git__strncmp                                   
+     3.39%      log  libc-2.19.so        [.] malloc_consolidate                             
+     3.00%      log  libc-2.19.so        [.] __memcpy_sse2_unaligned                        
+     2.88%      log  libgit2.so.0.23.0   [.] alloc_entry                                    
+     2.86%      log  libc-2.19.so        [.] _int_free                                      
+     2.58%      log  libz.so.1.2.8       [.] 0x000000000000bab2                             
+     2.18%      log  libgit2.so.0.23.0   [.] git_tree_entry__is_tree                        
+     2.12%      log  libgit2.so.0.23.0   [.] count_run                                      
+     2.02%      log  libgit2.so.0.23.0   [.] tree_iterator__push_frame                      
+     1.98%      log  libc-2.19.so        [.] memchr                                         
+     1.93%      log  [kernel.kallsyms]   [k] 0xffffffff81173f6f                             
+     1.80%      log  libgit2.so.0.23.0   [.] git_vector_insert                              
+     1.56%      log  libgit2.so.0.23.0   [.] entry_sort_cmp                                 
+     1.54%      log  libgit2.so.0.23.0   [.] pool_alloc                                     
+     1.54%      log  libgit2.so.0.23.0   [.] git__add_sizet_overflow                        
+     1.52%      log  libc-2.19.so        [.] malloc                                         
+     1.39%      log  libgit2.so.0.23.0   [.] git_path_cmp                                   
+     1.38%      log  libc-2.19.so        [.] memset                                         
+     1.35%      log  libgit2.so.0.23.0   [.] git__strtol32                                  
+     1.34%      log  libgit2.so.0.23.0   [.] alloc_size                                     
+     1.24%      log  libc-2.19.so        [.] strlen                                         
+     1.22%      log  libgit2.so.0.23.0   [.] git__isspace                                   
+     1.13%      log  libz.so.1.2.8       [.] inflate                                        
+     1.05%      log  libgit2.so.0.23.0   [.] git_tree(float, long double,...)(...)          
+     1.01%      log  libc-2.19.so        [.] free                                           
+     0.98%      log  libgit2.so.0.23.0   [.] git__malloc                                    
+     0.84%      log  libgit2.so.0.23.0   [.] tsort_r_cmp                                    
+     0.83%      log  libgit2.so.0.23.0   [.] merge                                          
+     0.74%      log  libgit2.so.0.23.0   [.] git_oid_fromraw                                
+     0.71%      log  libgit2.so.0.23.0   [.] git_tree_entry_free                            
+     0.59%      log  libgit2.so.0.23.0   [.] git_pool_malloc                                
+     0.53%      log  libgit2.so.0.23.0   [.] git_tree_entry_byindex                         
+     0.52%      log  libgit2.so.0.23.0   [.] git_vector_get                                 
+     0.42%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.40%      log  libgit2.so.0.23.0   [.] git_oid__hashcmp                               
+     0.32%      log  libgit2.so.0.23.0   [.] git_oid__hashcmp                               
+     0.29%      log  libc-2.19.so        [.] __memcpy_sse2                                  
+     0.26%      log  libz.so.1.2.8       [.] adler32                                        
+     0.20%      log  libcrypto.so.1.0.0  [.] 0x00000000000e8100                             
+     0.17%      log  libgit2.so.0.23.0   [.] git__multiply_sizet_overflow                   
+     0.16%      log  libgit2.so.0.23.0   [.] git__delta_apply                               
+     0.15%      log  libgit2.so.0.23.0   [.] git_oid_fromstrn                               
+     0.15%      log  libpthread-2.19.so  [.] pthread_mutex_lock                             
+     0.15%      log  libgit2.so.0.23.0   [.] git__memzero                                   
+     0.14%      log  libgit2.so.0.23.0   [.] kh_get_oid                                     
+     0.13%      log  libgit2.so.0.23.0   [.] memcpy@plt                                     
+     0.13%      log  libgit2.so.0.23.0   [.] kh_get_off                                     
+     0.11%      log  libgit2.so.0.23.0   [.] __ac_X31_hash_string                           
+     0.11%      log  libgit2.so.0.23.0   [.] kh_get_str                                     
+     0.10%      log  libc-2.19.so        [.] realloc                                        
+     0.09%      log  libc-2.19.so        [.] __libc_calloc                                  
+     0.09%      log  libc-2.19.so        [.] _int_realloc                                   
+     0.09%      log  libgit2.so.0.23.0   [.] sha1_position                                  
+     0.09%      log  libgit2.so.0.23.0   [.] compute_new_size                               
+     0.08%      log  libpthread-2.19.so  [.] pthread_mutex_unlock                           
+     0.08%      log  libgit2.so.0.23.0   [.] resize_vector                                  
+     0.07%      log  libgit2.so.0.23.0   [.] odb_read_1                                     
+     0.07%      log  libgit2.so.0.23.0   [.] packfile_unpack_header1                        
+     0.07%      log  libgit2.so.0.23.0   [.] nth_packed_object_offset                       
+     0.06%      log  libgit2.so.0.23.0   [.] git_buf_try_grow                               
+     0.06%      log  libgit2.so.0.23.0   [.] git__memrchr                                   
+     0.06%      log  libgit2.so.0.23.0   [.] git_buf_rfind_next                             
+     0.06%      log  libgit2.so.0.23.0   [.] tree_iterator__move_to_next                    
+     0.06%      log  libgit2.so.0.23.0   [.] git__tsort_r                                   
+     0.05%      log  libgit2.so.0.23.0   [.] git_atomic_dec                                 
+     0.05%      log  libc-2.19.so        [.] __GI___libc_close                              
+     0.05%      log  libgit2.so.0.23.0   [.] tree_iterator__search_cmp                      
+     0.05%      log  libgit2.so.0.23.0   [.] git_iterator_for_tree                          
+     0.05%      log  libgit2.so.0.23.0   [.] git_buf_join                                   
+     0.05%      log  libgit2.so.0.23.0   [.] git_atomic_inc                                 
+     0.05%      log  libgit2.so.0.23.0   [.] git__fromhex                                   
+     0.05%      log  libgit2.so.0.23.0   [.] get_entry                                      
+     0.05%      log  libgit2.so.0.23.0   [.] git_atomic_inc                                 
+     0.05%      log  libgit2.so.0.23.0   [.] pool_alloc_page                                
+     0.05%      log  libgit2.so.0.23.0   [.] git__reallocarray                              
+     0.05%      log  libgit2.so.0.23.0   [.] tree_iterator__set_next                        
+     0.04%      log  libgit2.so.0.23.0   [.] git_atomic_inc                                 
+     0.04%      log  libgit2.so.0.23.0   [.] git_commit_list_time_cmp                       
+     0.04%      log  libgit2.so.0.23.0   [.] git__unescape                                  
+     0.04%      log  libgit2.so.0.23.0   [.] git_object__from_odb_object                    
+     0.04%      log  libgit2.so.0.23.0   [.] cache_get                                      
+     0.04%      log  libgit2.so.0.23.0   [.] git_config__cvar                               
+     0.04%      log  libgit2.so.0.23.0   [.] pack_entry_find_offset                         
+     0.04%      log  libgit2.so.0.23.0   [.] git__bsearch_r                                 
+     0.04%      log  libgit2.so.0.23.0   [.] git_attr_fnmatch__parse                        
+     0.04%      log  libpthread-2.19.so  [.] pthread_rwlock_unlock                          
+     0.04%      log  libpthread-2.19.so  [.] pthread_rwlock_rdlock                          
+     0.04%      log  libgit2.so.0.23.0   [.] tree_iterator__update_entry                    
+     0.04%      log  libgit2.so.0.23.0   [.] config_refresh                                 
+     0.04%      log  libgit2.so.0.23.0   [.] git_config_snapshot                            
+     0.04%      log  libgit2.so.0.23.0   [.] config_get                                     
+     0.04%      log  libgit2.so.0.23.0   [.] git_vector_sort                                
+     0.04%      log  libgit2.so.0.23.0   [.] diff_list_apply_options                        
+     0.03%      log  libgit2.so.0.23.0   [.] git_tree_entry__is_tree                        
+     0.03%      log  libgit2.so.0.23.0   [.] kh_get_oid                                     
+     0.03%      log  libgit2.so.0.23.0   [.] git_oid__cmp                                   
+     0.03%      log  libgit2.so.0.23.0   [.] git_packfile_unpack                            
+     0.03%      log  libgit2.so.0.23.0   [.] git_object_lookup_prefix                       
+     0.03%      log  libgit2.so.0.23.0   [.] git_mwindow_close                              
+     0.03%      log  libgit2.so.0.23.0   [.] git_oid_equal                                  
+     0.03%      log  libgit2.so.0.23.0   [.] cache_get                                      
+     0.03%      log  libgit2.so.0.23.0   [.] git_mwindow_open                               
+     0.03%      log  libgit2.so.0.23.0   [.] git_oid__hashcmp                               
+     0.03%      log  libgit2.so.0.23.0   [.] git__prefixcmp                                 
+     0.03%      log  libgit2.so.0.23.0   [.] packfile_unpack_compressed                     
+     0.03%      log  libgit2.so.0.23.0   [.] git_atomic_dec                                 
+     0.03%      log  libgit2.so.0.23.0   [.] git_cached_obj_decref                          
+     0.03%      log  libgit2.so.0.23.0   [.] git__calloc                                    
+     0.03%      log  libgit2.so.0.23.0   [.] git_oid_iszero                                 
+     0.03%      log  libgit2.so.0.23.0   [.] git_signature__parse                           
+     0.03%      log  libgit2.so.0.23.0   [.] git_buf_free                                   
+     0.03%      log  libgit2.so.0.23.0   [.] hdr_sz                                         
+     0.03%      log  libgit2.so.0.23.0   [.] tree_iterator__pop_frame                       
+     0.03%      log  libgit2.so.0.23.0   [.] git_buf_truncate                               
+     0.03%      log  libgit2.so.0.23.0   [.] tree_iterator__current_filename                
+     0.03%      log  libgit2.so.0.23.0   [.] git_pack_entry_find                            
+     0.03%      log  libgit2.so.0.23.0   [.] git__memzero                                   
+     0.03%      log  libgit2.so.0.23.0   [.] tree_iterator__current_internal                
+     0.03%      log  libcrypto.so.1.0.0  [.] SHA1_Update                                    
+     0.03%      log  libgit2.so.0.23.0   [.] git_commit__parse                              
+     0.03%      log  libgit2.so.0.23.0   [.] pack_dependency_chain                          
+     0.02%      log  libgit2.so.0.23.0   [.] cache_store                                    
+     0.02%      log  libgit2.so.0.23.0   [.] commit_quick_parse                             
+     0.02%      log  libgit2.so.0.23.0   [.] git_diff__from_iterators                       
+     0.02%      log  libgit2.so.0.23.0   [.] git_pool_clear                                 
+     0.02%      log  libgit2.so.0.23.0   [.] git_vector_init                                
+     0.02%      log  libgit2.so.0.23.0   [.] git_buf_init                                   
+     0.02%      log  libc-2.19.so        [.] __memcmp_sse4_1                                
+     0.02%      log  libgit2.so.0.23.0   [.] free@plt                                       
+     0.02%      log  libgit2.so.0.23.0   [.] git__calloc                                    
+     0.02%      log  libgit2.so.0.23.0   [.] git__strcmp                                    
+     0.02%      log  libgit2.so.0.23.0   [.] git_oidmap_hash                                
+     0.02%      log  libz.so.1.2.8       [.] inflateInit2_                                  
+     0.02%      log  libgit2.so.0.23.0   [.] tree_iterator__at_tree                         
+     0.02%      log  libgit2.so.0.23.0   [.] git_object__size                               
+     0.02%      log  libgit2.so.0.23.0   [.] cache_should_store                             
+     0.02%      log  libgit2.so.0.23.0   [.] git_oid_cpy                                    
+     0.02%      log  libc-2.19.so        [.] __strcmp_sse2_unaligned                        
+     0.02%      log  libgit2.so.0.23.0   [.] iterator_advance                               
+     0.02%      log  libgit2.so.0.23.0   [.] git_revwalk_next                               
+     0.02%      log  libgit2.so.0.23.0   [.] resize                                         
+     0.02%      log  libgit2.so.0.23.0   [.] git_tree_lookup                                
+     0.02%      log  libgit2.so.0.23.0   [.] git_tree_free                                  
+     0.02%      log  libgit2.so.0.23.0   [.] pqueue_down                                    
+     0.02%      log  libgit2.so.0.23.0   [.] git_pathspec_prefix                            
+     0.02%      log  libpthread-2.19.so  [.] pthread_getspecific                            
+     0.02%      log  libgit2.so.0.23.0   [.] git_object_free                                
+     0.02%      log  libgit2.so.0.23.0   [.] pack_backend__read                             
+     0.02%      log  libgit2.so.0.23.0   [.] git_object(float, long double,...)(...)        
+     0.02%      log  libgit2.so.0.23.0   [.] git_odb_object_free                            
+     0.02%      log  libgit2.so.0.23.0   [.] diff_list_alloc                                
+     0.02%      log  libc-2.19.so        [.] __memmove_ssse3_back                           
+     0.02%      log  libgit2.so.0.23.0   [.] refcounted_strmap_take                         
+     0.02%      log  libgit2.so.0.23.0   [.] git_buf_rtruncate_at_char                      
+     0.02%      log  libgit2.so.0.23.0   [.] git_signature_free                             
+     0.02%      log  libgit2.so.0.23.0   [.] git_mwindow_contains                           
+     0.02%      log  libgit2.so.0.23.0   [.] git_atomic_get                                 
+     0.02%      log  libgit2.so.0.23.0   [.] maybe_modified                                 
+     0.02%      log  log                 [.] match_with_parent                              
+     0.02%      log  libgit2.so.0.23.0   [.] git_vector_free                                
+     0.02%      log  libgit2.so.0.23.0   [.] tree_iterator__advance_internal                
+     0.02%      log  libgit2.so.0.23.0   [.] odb_object__alloc                              
+     0.02%      log  libgit2.so.0.23.0   [.] handle_matched_item                            
+     0.02%      log  libgit2.so.0.23.0   [.] giterr_clear                                   
+     0.02%      log  libgit2.so.0.23.0   [.] git_revwalk__commit_lookup                     
+     0.02%      log  libgit2.so.0.23.0   [.] kh_put_oid                                     
+     0.02%      log  libgit2.so.0.23.0   [.] git_oidmap_hash                                
+     0.02%      log  libgit2.so.0.23.0   [.] git_vector_get                                 
+     0.02%      log  libgit2.so.0.23.0   [.] tree_iterator__pop_all                         
+     0.02%      log  libgit2.so.0.23.0   [.] kh_put_oid                                     
+     0.01%      log  libgit2.so.0.23.0   [.] git_buf_text_common_prefix                     
+     0.01%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.01%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.01%      log  libgit2.so.0.23.0   [.] git_vector_get                                 
+     0.01%      log  libgit2.so.0.23.0   [.] pqueue_up                                      
+     0.01%      log  libgit2.so.0.23.0   [.] git__multiply_sizet_overflow                   
+     0.01%      log  libgit2.so.0.23.0   [.] tree_iterator__create_root_frame               
+     0.01%      log  libc-2.19.so        [.] __GI___strnlen                                 
+     0.01%      log  libgit2.so.0.23.0   [.] git__reallocarray                              
+     0.01%      log  libgit2.so.0.23.0   [.] git_futils_readbuffer_updated                  
+     0.01%      log  libgit2.so.0.23.0   [.] git_repository_config_snapshot                 
+     0.01%      log  libgit2.so.0.23.0   [.] compute_minrun                                 
+     0.01%      log  libgit2.so.0.23.0   [.] config_readonly_open                           
+     0.01%      log  libgit2.so.0.23.0   [.] git_config_file__snapshot                      
+     0.01%      log  libgit2.so.0.23.0   [.] git_atomic_dec                                 
+     0.01%      log  libgit2.so.0.23.0   [.] git__isdigit                                   
+     0.01%      log  libgit2.so.0.23.0   [.] tree_iterator__te_cmp                          
+     0.01%      log  libgit2.so.0.23.0   [.] git_revwalk_reset                              
+     0.01%      log  libc-2.19.so        [.] pthread_mutex_init                             
+     0.01%      log  libgit2.so.0.23.0   [.] git_futils_readbuffer_fd                       
+     0.01%      log  libgit2.so.0.23.0   [.] git_config_new                                 
+     0.01%      log  libc-2.19.so        [.] pthread_mutex_lock                             
+     0.01%      log  libgit2.so.0.23.0   [.] free_lowest_entry                              
+     0.01%      log  libgit2.so.0.23.0   [.] git_oid__parse                                 
+     0.01%      log  libgit2.so.0.23.0   [.] kh_put_off                                     
+     0.01%      log  libc-2.19.so        [.] __GI___libc_read                               
+     0.01%      log  libgit2.so.0.23.0   [.] pathspec_match_one                             
+     0.01%      log  libgit2.so.0.23.0   [.] git_repository_odb__weakptr                    
+     0.01%      log  libgit2.so.0.23.0   [.] git_pool_mallocz                               
+     0.01%      log  libgit2.so.0.23.0   [.] kh_resize_oid                                  
+     0.01%      log  libz.so.1.2.8       [.] inflateResetKeep                               
+     0.01%      log  libc-2.19.so        [.] __GI___libc_open                               
+     0.01%      log  libc-2.19.so        [.] __strcasecmp_l_avx                             
+     0.01%      log  libpthread-2.19.so  [.] pthread_mutex_init                             
+     0.01%      log  libgit2.so.0.23.0   [.] git__multiply_sizet_overflow                   
+     0.01%      log  libgit2.so.0.23.0   [.] memset@plt                                     
+     0.01%      log  libgit2.so.0.23.0   [.] git_commit_parent_id                           
+     0.01%      log  libgit2.so.0.23.0   [.] git_tree_entrycount                            
+     0.01%      log  libgit2.so.0.23.0   [.] get_delta_base                                 
+     0.01%      log  libgit2.so.0.23.0   [.] config_free                                    
+     0.01%      log  libgit2.so.0.23.0   [.] git__calloc                                    
+     0.01%      log  libgit2.so.0.23.0   [.] git__global_state                              
+     0.01%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.01%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.01%      log  libgit2.so.0.23.0   [.] git_config__add_internal                       
+     0.01%      log  libc-2.19.so        [.] __xstat64                                      
+     0.01%      log  libgit2.so.0.23.0   [.] git_object_lookup                              
+     0.01%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.01%      log  libgit2.so.0.23.0   [.] git_buf_clear                                  
+     0.01%      log  libpthread-2.19.so  [.] pthread_rwlock_wrlock                          
+     0.01%      log  libgit2.so.0.23.0   [.] git__bsearch                                   
+     0.01%      log  libgit2.so.0.23.0   [.] git__add_sizet_overflow                        
+     0.01%      log  libgit2.so.0.23.0   [.] pack_window_open                               
+     0.01%      log  libgit2.so.0.23.0   [.] git__isspace                                   
+     0.01%      log  libgit2.so.0.23.0   [.] git_commit_tree                                
+     0.01%      log  libgit2.so.0.23.0   [.] git_buf_grow                                   
+     0.01%      log  libgit2.so.0.23.0   [.] git__calloc                                    
+     0.01%      log  libgit2.so.0.23.0   [.] git_diff_tree_to_tree                          
+     0.01%      log  libgit2.so.0.23.0   [.] git_commit_parent                              
+     0.01%      log  libgit2.so.0.23.0   [.] git_iterator_advance                           
+     0.01%      log  libgit2.so.0.23.0   [.] git_diff_free                                  
+     0.01%      log  libgit2.so.0.23.0   [.] git_atomic_dec                                 
+     0.01%      log  log                 [.] check_lg2                                      
+     0.01%      log  libgit2.so.0.23.0   [.] git_oid_fromstr                                
+     0.01%      log  libgit2.so.0.23.0   [.] git__malloc                                    
+     0.01%      log  libgit2.so.0.23.0   [.] git__realloc                                   
+     0.01%      log  log                 [.] git_show_last_commit                           
+     0.01%      log  libgit2.so.0.23.0   [.] git_odb_read                                   
+     0.01%      log  libcrypto.so.1.0.0  [.] SHA1_Final                                     
+     0.01%      log  libgit2.so.0.23.0   [.] backend_readonly_free                          
+     0.01%      log  libgit2.so.0.23.0   [.] git_hash_buf                                   
+     0.01%      log  libgit2.so.0.23.0   [.] git__substrdup                                 
+     0.01%      log  libgit2.so.0.23.0   [.] giterr__check_version                          
+     0.01%      log  libc-2.19.so        [.] __strcasecmp_avx                               
+     0.01%      log  libgit2.so.0.23.0   [.] giterr__check_version                          
+     0.01%      log  libgit2.so.0.23.0   [.] iterator_current                               
+     0.01%      log  libgit2.so.0.23.0   [.] git_repository_config__weakptr                 
+     0.01%      log  libgit2.so.0.23.0   [.] git_vector_insert_sorted                       
+     0.01%      log  libgit2.so.0.23.0   [.] git_pool__system_page_size                     
+     0.01%      log  libgit2.so.0.23.0   [.] p_read                                         
+     0.01%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.01%      log  libgit2.so.0.23.0   [.] git_cache_get_raw                              
+     0.01%      log  libgit2.so.0.23.0   [.] git_packfile_unpack_header                     
+     0.01%      log  libgit2.so.0.23.0   [.] git__strndup                                   
+     0.01%      log  libgit2.so.0.23.0   [.] git__is_ssizet                                 
+     0.01%      log  libgit2.so.0.23.0   [.] diff_strdup_prefix                             
+     0.01%      log  libgit2.so.0.23.0   [.] git_object_owner                               
+     0.01%      log  libgit2.so.0.23.0   [.] cache_add                                      
+     0.01%      log  libgit2.so.0.23.0   [.] git_cache_store_parsed                         
+     0.01%      log  libgit2.so.0.23.0   [.] process_commit                                 
+     0.01%      log  libgit2.so.0.23.0   [.] strlen@plt                                     
+     0.01%      log  libgit2.so.0.23.0   [.] tree_iterator__current                         
+     0.01%      log  libgit2.so.0.23.0   [.] git__iswildcard                                
+     0.01%      log  libcrypto.so.1.0.0  [.] SHA1_Init                                      
+     0.01%      log  libgit2.so.0.23.0   [.] git_diff_num_deltas                            
+     0.01%      log  libgit2.so.0.23.0   [.] odb_cache                                      
+     0.01%      log  libgit2.so.0.23.0   [.] git__add_sizet_overflow                        
+     0.01%      log  libgit2.so.0.23.0   [.] git__add_sizet_overflow                        
+     0.01%      log  libgit2.so.0.23.0   [.] git_buf_grow@plt                               
+     0.01%      log  libgit2.so.0.23.0   [.] git_cache_store_raw                            
+     0.01%      log  libgit2.so.0.23.0   [.] kh_resize_oid                                  
+     0.01%      log  libgit2.so.0.23.0   [.] is_crud                                        
+     0.01%      log  libgit2.so.0.23.0   [.] git_array_grow                                 
+     0.00%      log  libgit2.so.0.23.0   [.] clear_cache                                    
+     0.00%      log  libgit2.so.0.23.0   [.] git_commit_lookup                              
+     0.00%      log  libgit2.so.0.23.0   [.] git_buf_joinpath                               
+     0.00%      log  libgit2.so.0.23.0   [.] git_atomic_inc                                 
+     0.00%      log  libgit2.so.0.23.0   [.] git_oid_cmp@plt                                
+     0.00%      log  libgit2.so.0.23.0   [.] git__calloc                                    
+     0.00%      log  libgit2.so.0.23.0   [.] git_pathspec__match_at                         
+     0.00%      log  libc-2.19.so        [.] htonl                                          
+     0.00%      log  libgit2.so.0.23.0   [.] git_config_add_backend                         
+     0.00%      log  libgit2.so.0.23.0   [.] git__add_sizet_overflow                        
+     0.00%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.00%      log  libgit2.so.0.23.0   [.] git__add_sizet_overflow                        
+     0.00%      log  libgit2.so.0.23.0   [.] tree_iterator(float, long double,...)(...)     
+     0.00%      log  libgit2.so.0.23.0   [.] git_odb_object(float, long double,...)(...)    
+     0.00%      log  libgit2.so.0.23.0   [.] revwalk_next_timesort                          
+     0.00%      log  libgit2.so.0.23.0   [.] git_pool_strndup                               
+     0.00%      log  libgit2.so.0.23.0   [.] extract_trimmed                                
+     0.00%      log  libgit2.so.0.23.0   [.] git_index_entry_is_conflict                    
+     0.00%      log  libgit2.so.0.23.0   [.] git__strdup                                    
+     0.00%      log  libgit2.so.0.23.0   [.] git_cached_obj_incref                          
+     0.00%      log  libgit2.so.0.23.0   [.] git_atomic_inc                                 
+     0.00%      log  libgit2.so.0.23.0   [.] diff_entry_cmp                                 
+     0.00%      log  libgit2.so.0.23.0   [.] use_git_free                                   
+     0.00%      log  libgit2.so.0.23.0   [.] release_map                                    
+     0.00%      log  libgit2.so.0.23.0   [.] git__malloc                                    
+     0.00%      log  libgit2.so.0.23.0   [.] git_iterator_free                              
+     0.00%      log  libgit2.so.0.23.0   [.] git_cached_obj_incref                          
+     0.00%      log  libc-2.19.so        [.] __strchr_sse2                                  
+     0.00%      log  libgit2.so.0.23.0   [.] diff_pathspec_match                            
+     0.00%      log  libgit2.so.0.23.0   [.] git__tsort                                     
+     0.00%      log  libgit2.so.0.23.0   [.] memchr@plt                                     
+     0.00%      log  libgit2.so.0.23.0   [.] parse_optimized_patterns                       
+     0.00%      log  libgit2.so.0.23.0   [.] iterator__clear_entry                          
+     0.00%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.00%      log  libgit2.so.0.23.0   [.] refcounted_strmap_free                         
+     0.00%      log  libgit2.so.0.23.0   [.] git_vector_set_cmp                             
+     0.00%      log  libgit2.so.0.23.0   [.] git_commit_owner                               
+     0.00%      log  libgit2.so.0.23.0   [.] git_vector_free_deep                           
+     0.00%      log  libc-2.19.so        [.] pthread_mutex_unlock                           
+     0.00%      log  libgit2.so.0.23.0   [.] git_tree_owner                                 
+     0.00%      log  libgit2.so.0.23.0   [.] git_config_entry_free                          
+     0.00%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.00%      log  libgit2.so.0.23.0   [.] file_internal_free                             
+     0.00%      log  libgit2.so.0.23.0   [.] git_oid_equal@plt                              
+     0.00%      log  libgit2.so.0.23.0   [.] process_commit_parents                         
+     0.00%      log  libc-2.19.so        [.] __strdup                                       
+     0.00%      log  libgit2.so.0.23.0   [.] git__is_ssizet                                 
+     0.00%      log  libgit2.so.0.23.0   [.] git_buf_putc                                   
+     0.00%      log  libgit2.so.0.23.0   [.] git_pathspec_is_empty                          
+     0.00%      log  libgit2.so.0.23.0   [.] git_pathspec__vinit                            
+     0.00%      log  libgit2.so.0.23.0   [.] git__malloc                                    
+     0.00%      log  libgit2.so.0.23.0   [.] pack_entry_find                                
+     0.00%      log  libgit2.so.0.23.0   [.] diff_set_ignore_case                           
+     0.00%      log  libgit2.so.0.23.0   [.] git_vector_pop                                 
+     0.00%      log  libgit2.so.0.23.0   [.] git__calloc                                    
+     0.00%      log  libgit2.so.0.23.0   [.] iterator__update_ignore_case                   
+     0.00%      log  libgit2.so.0.23.0   [.] malloc@plt                                     
+     0.00%      log  libgit2.so.0.23.0   [.] git__iswildcard                                
+     0.00%      log  libgit2.so.0.23.0   [.] git_hash_update                                
+     0.00%      log  libgit2.so.0.23.0   [.] git_hash_init                                  
+     0.00%      log  libgit2.so.0.23.0   [.] read@plt                                       
+     0.00%      log  libgit2.so.0.23.0   [.] alloc_parents                                  
+     0.00%      log  libgit2.so.0.23.0   [.] git_pathspec__match                            
+     0.00%      log  libgit2.so.0.23.0   [.] git_commit_free                                
+     0.00%      log  libgit2.so.0.23.0   [.] git__add_sizet_overflow                        
+     0.00%      log  libgit2.so.0.23.0   [.] git_config_free                                
+     0.00%      log  libgit2.so.0.23.0   [.] git_oid_cmp                                    
+     0.00%      log  libgit2.so.0.23.0   [.] git__reallocarray                              
+     0.00%      log  libgit2.so.0.23.0   [.] pathspec_match_context_init                    
+     0.00%      log  libgit2.so.0.23.0   [.] git__is_sizet                                  
+     0.00%      log  libgit2.so.0.23.0   [.] git_object_free@plt                            
+     0.00%      log  libc-2.19.so        [.] __errno_location                               
+     0.00%      log  libgit2.so.0.23.0   [.] git__calloc                                    
+     0.00%      log  libgit2.so.0.23.0   [.] diff_list_free                                 
+     0.00%      log  libgit2.so.0.23.0   [.] git__malloc                                    
+     0.00%      log  libz.so.1.2.8       [.] inflateReset2                                  
+     0.00%      log  libgit2.so.0.23.0   [.] git_commit_parentcount                         
+     0.00%      log  libgit2.so.0.23.0   [.] git_oid_fromstr@plt                            
+     0.00%      log  libgit2.so.0.23.0   [.] git_odb_object_size                            
+     0.00%      log  libgit2.so.0.23.0   [.] git_oid_fromstrn@plt                           
+     0.00%      log  libgit2.so.0.23.0   [.] tree_iterator__advance                         
+     0.00%      log  libgit2.so.0.23.0   [.] git_buf_detach                                 
+     0.00%      log  libc-2.19.so        [.] pthread_mutex_destroy                          
+     0.00%      log  libgit2.so.0.23.0   [.] config_backend_cmp                             
+     0.00%      log  libgit2.so.0.23.0   [.] git_hash_final                                 
+     0.00%      log  libgit2.so.0.23.0   [.] git_tree_entrycount@plt                        
+     0.00%      log  libgit2.so.0.23.0   [.] git_atomic_dec                                 
+     0.00%      log  libgit2.so.0.23.0   [.] git_cache_get_any                              
+     0.00%      log  libgit2.so.0.23.0   [.] git__isspace                                   
+     0.00%      log  libgit2.so.0.23.0   [.] git_commit(float, long double,...)(...)        
+     0.00%      log  libgit2.so.0.23.0   [.] git_atomic_inc                                 
+     0.00%      log  libgit2.so.0.23.0   [.] git_iterator_current                           
+     0.00%      log  libgit2.so.0.23.0   [.] git_pathspec(void, float, long double,...)(...)
+     0.00%      log  log                 [.] git_diff_free@plt                              
+     0.00%      log  libgit2.so.0.23.0   [.] git__calloc                                    
+     0.00%      log  libcrypto.so.1.0.0  [.] memset@plt                                     
+     0.00%      log  libgit2.so.0.23.0   [.] git_futils_open_ro                             
+     0.00%      log  libgit2.so.0.23.0   [.] git(float, long double,...)(...)               
+     0.00%      log  libgit2.so.0.23.0   [.] git_tree_lookup@plt                            
+     0.00%      log  libgit2.so.0.23.0   [.] git_oid__cmp                                   
+     0.00%      log  libgit2.so.0.23.0   [.] git_config_entry_free@plt                      
+     0.00%      log  libgit2.so.0.23.0   [.] free_cache_object                              
+     0.00%      log  libgit2.so.0.23.0   [.] use_git_alloc                                  
+     0.00%      log  libgit2.so.0.23.0   [.] git_vector_last                                
+     0.00%      log  libgit2.so.0.23.0   [.] git_commit_list_parse                          
+     0.00%      log  libgit2.so.0.23.0   [.] hardcoded_objects                              
+     0.00%      log  libgit2.so.0.23.0   [.] strchr@plt                                     
+     0.00%      log  libgit2.so.0.23.0   [.] git_object_lookup_prefix@plt                   
+     0.00%      log  libgit2.so.0.23.0   [.] git_buf_text_unescape                          
+     0.00%      log  libgit2.so.0.23.0   [.] pthread_mutex_lock@plt                         
+     0.00%      log  libgit2.so.0.23.0   [.] git_oid_fromraw@plt                            
+     0.00%      log  libgit2.so.0.23.0   [.] git_buf_sets                                   
+     0.00%      log  libgit2.so.0.23.0   [.] SHA1_Update@plt                                
+     0.00%      log  libgit2.so.0.23.0   [.] git_object_dup                                 
+     0.00%      log  libgit2.so.0.23.0   [.] git_odb_object_free@plt                        
+     0.00%      log  ld-2.19.so          [.] do_lookup_x                                    
+     0.00%      log  libc-2.19.so        [.] getenv                                         
+     0.00%      log  libcrypto.so.1.0.0  [.] lh_strhash                                     
+     0.00%      log  ld-2.19.so          [.] _dl_lookup_symbol_x                            
+     0.00%      log  ld-2.19.so          [.] _dl_name_match_p                               
+     0.00%       sh  [kernel.kallsyms]   [k] 0xffffffff8104f45a                             
+
+
+#
+# (For a higher level overview, try: perf report --sort comm,dso)
+#

@@ -1,0 +1,74 @@
+# ========
+# captured on: Sat Nov 14 22:43:37 2015
+# hostname : LeoMa-ThinkPad-T440
+# os release : 3.13.0-57-generic
+# perf version : 3.13.11-ckt21
+# arch : x86_64
+# nrcpus online : 4
+# nrcpus avail : 4
+# cpudesc : Intel(R) Core(TM) i5-4210U CPU @ 1.70GHz
+# cpuid : GenuineIntel,6,69,1
+# total memory : 3748808 kB
+# cmdline : /usr/lib/linux-tools-3.13.0-57/perf record ./git-log -1 COPYING 
+# event : name = cycles, type = 0, config = 0x0, config1 = 0x0, config2 = 0x0, excl_usr = 0, excl_kern = 0, excl_host = 0, excl_guest = 1, precise_ip = 0, attr_mmap2 = 0, attr_mmap  = 1, attr_mmap_data = 0
+# HEADER_CPU_TOPOLOGY info available, use -I to display
+# HEADER_NUMA_TOPOLOGY info available, use -I to display
+# pmu mappings: cpu = 4, software = 1, tracepoint = 2, breakpoint = 5
+# ========
+#
+# Samples: 442  of event 'cycles'
+# Event count (approx.): 272658596
+#
+# Overhead  Command      Shared Object                           Symbol
+# ........  .......  .................  ...............................
+#
+    29.09%  git-log  libz.so.1.2.8      [.] 0x0000000000007c9a         
+    18.37%  git-log  libz.so.1.2.8      [.] inflate                    
+    11.25%  git-log  libc-2.19.so       [.] __memcpy_sse2_unaligned    
+     6.83%  git-log  [kernel.kallsyms]  [k] 0xffffffff8104f45a         
+     4.99%  git-log  libc-2.19.so       [.] _int_malloc                
+     4.68%  git-log  git-log            [.] find_pack_entry_one        
+     3.07%  git-log  libz.so.1.2.8      [.] adler32                    
+     2.36%  git-log  libc-2.19.so       [.] _int_free                  
+     1.84%  git-log  git-log            [.] lookup_object              
+     1.41%  git-log  git-log            [.] unpack_object_header_buffer
+     1.22%  git-log  git-log            [.] read_packed_sha1           
+     1.15%  git-log  git-log            [.] patch_delta                
+     0.97%  git-log  git-log            [.] unpack_entry               
+     0.94%  git-log  libc-2.19.so       [.] free                       
+     0.92%  git-log  git-log            [.] nth_packed_object_offset   
+     0.73%  git-log  libc-2.19.so       [.] malloc                     
+     0.72%  git-log  git-log            [.] tree_entry_interesting     
+     0.71%  git-log  git-log            [.] create_object              
+     0.68%  git-log  libc-2.19.so       [.] __GI___strncmp_ssse3       
+     0.48%  git-log  git-log            [.] git_inflate                
+     0.48%  git-log  libc-2.19.so       [.] malloc_consolidate         
+     0.48%  git-log  libc-2.19.so       [.] __memcmp_sse4_1            
+     0.47%  git-log  git-log            [.] do_xmalloc                 
+     0.46%  git-log  git-log            [.] decode_tree_entry          
+     0.46%  git-log  git-log            [.] add_parents_to_list        
+     0.46%  git-log  git-log            [.] get_delta_base             
+     0.46%  git-log  git-log            [.] type_from_string_gently    
+     0.28%     less  [kernel.kallsyms]  [k] 0xffffffff8104f45a         
+     0.25%  git-log  git-log            [.] find_pack_entry            
+     0.24%  git-log  git-log            [.] use_pack                   
+     0.24%  git-log  git-log            [.] git_inflate_end            
+     0.24%  git-log  git-log            [.] unpack_object_header       
+     0.24%  git-log  git-log            [.] do_xmallocz                
+     0.24%  git-log  git-log            [.] do_match                   
+     0.24%  git-log  git-log            [.] git_inflate_init           
+     0.24%  git-log  git-log            [.] skip_uninteresting         
+     0.24%  git-log  libc-2.19.so       [.] strtoul                    
+     0.24%  git-log  git-log            [.] memcpy@plt                 
+     0.24%  git-log  libz.so.1.2.8      [.] malloc@plt                 
+     0.24%  git-log  git-log            [.] unpack_compressed_entry    
+     0.24%  git-log  git-log            [.] zlib_post_call             
+     0.23%  git-log  git-log            [.] get_sha1_hex               
+     0.22%  git-log  git-log            [.] is_pack_valid              
+     0.22%  git-log  git-log            [.] parse_commit_buffer        
+     0.22%  git-log  git-log            [.] strlen@plt                 
+
+
+#
+# (For a higher level overview, try: perf report --sort comm,dso)
+#
